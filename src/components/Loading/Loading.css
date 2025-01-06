@@ -5,6 +5,19 @@
     height: 80px;
 }
 
+.Loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Add a semi-transparent background */
+    z-index: 1000;
+}
+
 .lds-ring div {
     box-sizing: border-box;
     display: block;
@@ -12,10 +25,10 @@
     width: 64px;
     height: 64px;
     margin: 8px;
-    border: 8px solid #3498db;
+    border: 8px solid #03045e;
     border-radius: 50%;
     animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: #3498db transparent transparent transparent;
+    border-color: #03045e transparent transparent transparent;
 }
 
 .lds-ring div:nth-child(1) {

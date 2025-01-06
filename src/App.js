@@ -4,7 +4,6 @@ import SearchResults from './components/SearchResults/SearchResults';
 import Playlist from './components/Playlist/Playlist';
 import './App.css';
 import Spotify from './utils/Spotify';
-import toast from 'react-hot-toast';
 import Loading from './components/Loading/Loading';
 
 function App() {
@@ -16,7 +15,9 @@ function App() {
   const [uris, setUris] = useState([]);
 
   const handleSearch = async (searchTerm) => {
+    setLoading(true);
     const results = await Spotify.search(searchTerm);
+    setLoading(false);
     setSearchResults(results);
     console.log(results);
   }
@@ -25,7 +26,6 @@ function App() {
     setSearchResults(searchResults.filter(t => t.id !== track.id));
     setPlaylist([...playlist, track]);
     setUris([...uris, track.uri]);
-    setLoading(true);
   }
 
   const removeFromPlaylist = (track) => {
@@ -34,11 +34,15 @@ function App() {
   }
 
   const handleSavePlaylist = async (playlistName, uris) => {
+    if (!playlistName || !uris.length) {
+      return;
+    }
+    setLoading(true);
     await Spotify.savePlaylist(playlistName, uris);
+    setLoading(false);
     console.log(playlistName + uris);
     setPlaylist([]);
     setPlaylistName('New Playlist');
-    toast.success('Playlist saved!');
   }
   
   useEffect(() => {
