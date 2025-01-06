@@ -1,0 +1,32 @@
+.Playlist {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    width: 35%;
+    color: #03045e;
+    border: 1.5px #03045e;
+    border-style: dashed;
+    height: fit-content;
+  }
+  
+  .Playlist input {
+    width: 80%;
+    max-width: 400px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Playlist input:focus {
+    border: 1px solid darkmagenta;
+    box-shadow: 0 0 10px rgba(30, 215, 96, 0.3);
+    outline: none;
+}
+  

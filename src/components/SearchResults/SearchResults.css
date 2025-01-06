@@ -1,0 +1,25 @@
+.SearchResults {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    width: 35%;
+    color: #03045e;
+    border: 1.5px #03045e;
+    border-style: dashed;
+  }
+  
+  .SearchResults h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  .no-results {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+}
+  

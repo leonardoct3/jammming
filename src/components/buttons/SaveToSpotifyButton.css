@@ -1,0 +1,22 @@
+.SaveToSpotifyButton {
+    background: linear-gradient(135deg, purple, purple);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.1s ease, transform 0.2s ease;
+    margin-bottom: 5rem;
+}
+
+.SaveToSpotifyButton:hover {
+    background: linear-gradient(135deg, darkmagenta, darkmagenta);
+    transform: scale(1.05);
+}
+
+.SaveToSpotifyButton:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(155, 89, 182, 0.7);
+}
